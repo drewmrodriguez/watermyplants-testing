@@ -14,13 +14,12 @@ server.use("/api/users", usersRouter);
 server.use("/api/plants", plantsRouter);
 
 // SANITY CHECK ENDPOINT
-server.get("/", (req, res, next)=>{
-    res.json({
-        message: "API Up"
-    })
-})
+// server.get("/", (req, res, next)=>{
+//     res.json({
+//         message: "API Up"
+//     })
+// })
 
-//Global Error Handling
 server.use((err, req, res, next) => {
   res.json({
     message: err.message,
